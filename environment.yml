@@ -1,0 +1,23 @@
+name: discrete
+channels:
+    - pytorch
+    - conda-forge
+    - defaults
+dependencies:
+    - python=3.6
+    - pytorch=1.2.0
+    - numpy=1.16.4
+    - pandas=1.0.3
+    # bokeh for plotting
+    - bokeh=2.0.1
+    # jupyter + ipython
+    - ipykernel=5.1.4
+    - notebook=6.0.3
+    - pip
+    - pip:
+        - pyhocon==0.3.35
+        - allennlp==0.9.0
+        - tensorboard
+        - tensorboardX==1.9
+        # download from google drive
+        - gdown
