@@ -26,25 +26,9 @@ This is the codebase for our ACL 2020 paper:
 - packages are specified in [environment.yml](environment.yml)
 
 - require conda3: [Anaconda 3](https://docs.anaconda.com/anaconda/install/) or [Miniconda 3](https://docs.conda.io/en/latest/miniconda.html)
-
-  - create [conda environment](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html):
-
     ```
     conda env create -f environment.yml
-    ```
-
-  - activate/deactivate the environment:
-
-    ```
-    # linux/mac (conda>=3.6):
     conda activate discrete
-    conda deactivate
-    # linux/mac (conda<3.6):
-    source activate discrete
-    source deactivate
-    # windows:
-    activate discrete
-    deactivate
     ```
 
 ### 2 Data
@@ -63,10 +47,8 @@ text classification datasets: AG News, DBPedia, Yelp Review Full
   # https://pypi.org/project/gdown/
   # already included in the envrionment.yml
   pip install gdown
-
   # download data from google drive
   bash scripts/download_data.sh /path/to/data/dir
-
   # random sample dev set 5000
   python scripts/train_dev_split.py /path/to/data/dir
   ```
